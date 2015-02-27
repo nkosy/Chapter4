@@ -12,6 +12,10 @@ public class BigMac extends CheeseBurger {
         super(myBurger);
     }
 
+    public BigMac() {
+        super();
+    }
+
     public void addSauce()
     {
         super.addSauce("Big Mac sauce");

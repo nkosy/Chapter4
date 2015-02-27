@@ -1,5 +1,6 @@
 package com.nkosy.objectorientatedprinciples.polymorphism;
 
+import com.nkosy.config.AppConfigCorrection;
 import com.nkosy.objectorientatedprinciples.polymorphism.service.Impl.SportsCar;
 import com.nkosy.objectorientatedprinciples.polymorphism.service.Impl.Suv;
 import com.nkosy.objectorientatedprinciples.polymorphism.service.Impl.Truck;
@@ -8,6 +9,8 @@ import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
  * Created by nkosy on 2015/02/26.
@@ -18,9 +21,14 @@ public class PolymorphismTest {
     Vehicle dav;
     @Before
     public void setUp() throws Exception {
-        ferrari = new SportsCar();
-        fortuner = new Suv();
-        dav = new Truck();
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfigCorrection.class);
+        ferrari = (Vehicle)ctx.getBean("sportscar");
+
+        ApplicationContext ctxSuv = new AnnotationConfigApplicationContext(AppConfigCorrection.class);
+        fortuner = (Vehicle)ctx.getBean("suv");
+
+        ApplicationContext ctxTruck = new AnnotationConfigApplicationContext(AppConfigCorrection.class);
+        dav = (Vehicle)ctx.getBean("truck");
     }
 
     @Test

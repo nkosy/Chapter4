@@ -1,5 +1,15 @@
 package com.nkosy.config;
 
+import com.nkosy.inheritancealternative.service.Food;
+import com.nkosy.inheritancealternative.service.Impl.NormalPlate;
+import com.nkosy.objectorientatedprinciples.encapsulation.service.Impl.Employee;
+import com.nkosy.objectorientatedprinciples.encapsulation.service.Person;
+import com.nkosy.objectorientatedprinciples.inheritance.service.Burger;
+import com.nkosy.objectorientatedprinciples.inheritance.service.Impl.BigMac;
+import com.nkosy.objectorientatedprinciples.polymorphism.service.Impl.SportsCar;
+import com.nkosy.objectorientatedprinciples.polymorphism.service.Impl.Suv;
+import com.nkosy.objectorientatedprinciples.polymorphism.service.Impl.Truck;
+import com.nkosy.objectorientatedprinciples.polymorphism.service.Vehicle;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -8,7 +18,34 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class AppConfigCorrection {
-    /*public Bird getDove(){
-        return new Dove();
-    }*/
+
+    @Bean(name="emp")
+    public Person getPerson(){
+        return new Employee();
+    }
+
+    @Bean(name="kos")
+    public Burger getBigMac(){
+        return new BigMac();
+    }
+
+    @Bean(name="sportscar")
+    public Vehicle getSpCar(){
+        return new SportsCar();
+    }
+
+    @Bean(name="suv")
+    public Vehicle getSuv(){
+        return new Suv();
+    }
+
+    @Bean(name="truck")
+    public Vehicle getTruck(){
+        return new Truck();
+    }
+
+    @Bean(name="alternative")
+    public NormalPlate getAlternative(){
+        return new NormalPlate();
+    }
 }

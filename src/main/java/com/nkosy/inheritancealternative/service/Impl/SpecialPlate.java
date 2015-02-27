@@ -1,6 +1,6 @@
-package com.nkosy.objectorientatedprinciples.inheritance.service.Impl;
+package com.nkosy.inheritancealternative.service.Impl;
 
-import com.nkosy.objectorientatedprinciples.inheritance.service.Burger;
+import com.nkosy.inheritancealternative.service.Food;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,16 +8,8 @@ import java.util.List;
 /**
  * Created by nkosy on 2015/02/26.
  */
-public class CheeseBurger implements Burger {
-    private List myBurger = new ArrayList();
-
-    public CheeseBurger(List myBurger) {
-        this.myBurger = myBurger;
-    }
-
-    public CheeseBurger() {
-
-    }
+public class SpecialPlate implements Food {
+   private List myBurger = new ArrayList();
 
     @Override
     public void addCheese() {
@@ -43,5 +35,10 @@ public class CheeseBurger implements Burger {
     @Override
     public String serve() {
         return myBurger.toString();
+    }
+
+    @Override
+    public List getMyBurger() {
+        return myBurger;
     }
 }

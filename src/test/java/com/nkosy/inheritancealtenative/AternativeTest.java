@@ -1,7 +1,8 @@
-package com.nkosy.objectorientatedprinciples.inheritance;
+package com.nkosy.inheritancealtenative;
 
 import com.nkosy.config.AppConfigCorrection;
-import com.nkosy.objectorientatedprinciples.inheritance.service.Burger;
+import com.nkosy.inheritancealternative.service.Food;
+import com.nkosy.inheritancealternative.service.Impl.NormalPlate;
 import com.nkosy.objectorientatedprinciples.inheritance.service.Impl.BigMac;
 import junit.framework.Assert;
 import org.junit.After;
@@ -10,30 +11,25 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by nkosy on 2015/02/26.
  */
-public class InheritanceTest {
-    Burger myBurger;
-    List oder;
+public class AternativeTest {
+    NormalPlate f1;
     @Before
     public void setUp() throws Exception {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfigCorrection.class);
-        myBurger = (Burger)ctx.getBean("kos");
+        f1 = (NormalPlate)ctx.getBean("alternative");
 
-        oder = new ArrayList();
-        myBurger.addCheese();
-        myBurger.addOnions();
-        myBurger.addPattie();
-        myBurger.addSauce("BigMac Sc");
+        f1.getPlate().addPattie();
+        f1.getPlate().addOnions();
+        f1.getPlate().addCheese();
+        f1.getPlate().addSauce("BigMac Sc");
     }
 
     @Test
     public void testName() throws Exception {
-        Assert.assertEquals("[Cheese, Onions, Pattie, BigMac Sc]", myBurger.serve());
+        Assert.assertEquals("[Pattie, Onions, Cheese, BigMac Sc]", f1.getPlate().serve());
     }
 
     @After
