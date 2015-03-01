@@ -10,6 +10,9 @@ import com.nkosy.objectorientatedprinciples.polymorphism.service.Impl.SportsCar;
 import com.nkosy.objectorientatedprinciples.polymorphism.service.Impl.Suv;
 import com.nkosy.objectorientatedprinciples.polymorphism.service.Impl.Truck;
 import com.nkosy.objectorientatedprinciples.polymorphism.service.Vehicle;
+import com.nkosy.softwaredesignprinciples.dip.correction.service.Impl.TenantManagementCorImpl;
+import com.nkosy.softwaredesignprinciples.dip.correction.service.TenantManagementCor;
+import com.nkosy.softwaredesignprinciples.dip.violation.service.TenantManagement;
 import com.nkosy.softwaredesignprinciples.ocp.correction.service.Impl.CaptainSal;
 import com.nkosy.softwaredesignprinciples.ocp.correction.service.Impl.CrewSal;
 import com.nkosy.softwaredesignprinciples.ocp.correction.service.Salary;
@@ -60,5 +63,10 @@ public class AppConfigCorrection {
     @Bean(name="crewsalary")
     public Salary getCrewSal(){
         return new CrewSal();
+    }
+
+    @Bean(name = "testTMCor")
+    public TenantManagementCor getTMService(){
+        return new TenantManagementCorImpl();
     }
 }
