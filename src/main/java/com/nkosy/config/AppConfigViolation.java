@@ -2,6 +2,8 @@ package com.nkosy.config;
 
 import com.nkosy.softwaredesignprinciples.dip.violation.service.TManagement;
 import com.nkosy.softwaredesignprinciples.dip.violation.service.TenantManagement;
+import com.nkosy.softwaredesignprinciples.isp.violation.service.Impl.MaintainBldB;
+import com.nkosy.softwaredesignprinciples.isp.violation.service.MaintainBlds;
 import com.nkosy.softwaredesignprinciples.ocp.violation.service.Impl.PaymentViolationImpl;
 import com.nkosy.softwaredesignprinciples.ocp.violation.service.PaymentViolation;
 import com.nkosy.softwaredesignprinciples.srp.violation.service.Impl.LogisticsImpl;
@@ -30,5 +32,10 @@ public class AppConfigViolation {
     @Bean(name = "testVTM")
     public TManagement getTService(){
         return new TManagement();
+    }
+
+    @Bean(name = "MBA")
+    public MaintainBlds getMBAService(){
+        return new MaintainBldB();
     }
 }
