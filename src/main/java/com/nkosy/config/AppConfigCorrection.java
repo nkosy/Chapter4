@@ -10,6 +10,9 @@ import com.nkosy.objectorientatedprinciples.polymorphism.service.Impl.SportsCar;
 import com.nkosy.objectorientatedprinciples.polymorphism.service.Impl.Suv;
 import com.nkosy.objectorientatedprinciples.polymorphism.service.Impl.Truck;
 import com.nkosy.objectorientatedprinciples.polymorphism.service.Vehicle;
+import com.nkosy.softwaredesignprinciples.ocp.correction.service.Impl.CaptainSal;
+import com.nkosy.softwaredesignprinciples.ocp.correction.service.Impl.CrewSal;
+import com.nkosy.softwaredesignprinciples.ocp.correction.service.Salary;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -47,5 +50,15 @@ public class AppConfigCorrection {
     @Bean(name="alternative")
     public NormalPlate getAlternative(){
         return new NormalPlate();
+    }
+
+    @Bean(name="capsalary")
+    public Salary getCapSalary(){
+        return new CaptainSal();
+    }
+
+    @Bean(name="crewsalary")
+    public Salary getCrewSal(){
+        return new CrewSal();
     }
 }
