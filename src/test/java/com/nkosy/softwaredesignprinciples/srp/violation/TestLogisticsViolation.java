@@ -2,7 +2,7 @@ package com.nkosy.softwaredesignprinciples.srp.violation;
 
 import com.nkosy.config.AppConfigCorrection;
 import com.nkosy.config.AppConfigViolation;
-import com.nkosy.softwaredesignprinciples.srp.violation.service.Impl.LogisticsImpl;
+import com.nkosy.softwaredesignprinciples.srp.violation.service.impl.LogisticsImpl;
 import com.nkosy.softwaredesignprinciples.srp.violation.service.Logistics;
 import org.junit.After;
 import org.junit.Assert;

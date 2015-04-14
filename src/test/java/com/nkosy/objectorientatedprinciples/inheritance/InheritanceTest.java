@@ -2,7 +2,7 @@ package com.nkosy.objectorientatedprinciples.inheritance;
 
 import com.nkosy.config.AppConfigCorrection;
 import com.nkosy.objectorientatedprinciples.inheritance.service.Burger;
-import com.nkosy.objectorientatedprinciples.inheritance.service.Impl.BigMac;
+import com.nkosy.objectorientatedprinciples.inheritance.service.impl.BigMac;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;

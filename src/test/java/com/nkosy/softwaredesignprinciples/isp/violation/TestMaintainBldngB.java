@@ -1,7 +1,7 @@
 package com.nkosy.softwaredesignprinciples.isp.violation;
 
 import com.nkosy.config.AppConfigViolation;
-import com.nkosy.softwaredesignprinciples.isp.violation.service.Impl.MaintainBldB;
+import com.nkosy.softwaredesignprinciples.isp.violation.service.impl.MaintainBldB;
 import com.nkosy.softwaredesignprinciples.isp.violation.service.MaintainBlds;
 import org.junit.After;
 import org.junit.Assert;

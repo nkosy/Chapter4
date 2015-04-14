@@ -1,7 +1,7 @@
 package com.nkosy.objectorientatedprinciples.encapsulation;
 
 import com.nkosy.config.AppConfigCorrection;
-import com.nkosy.objectorientatedprinciples.encapsulation.service.Impl.Employee;
+import com.nkosy.objectorientatedprinciples.encapsulation.service.impl.Employee;
 import com.nkosy.objectorientatedprinciples.encapsulation.service.Person;
 import org.junit.After;
 import org.junit.Assert;

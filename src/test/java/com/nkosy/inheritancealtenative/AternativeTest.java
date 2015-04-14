@@ -2,8 +2,8 @@ package com.nkosy.inheritancealtenative;
 
 import com.nkosy.config.AppConfigCorrection;
 import com.nkosy.inheritancealternative.service.Food;
-import com.nkosy.inheritancealternative.service.Impl.NormalPlate;
-import com.nkosy.objectorientatedprinciples.inheritance.service.Impl.BigMac;
+import com.nkosy.inheritancealternative.service.impl.NormalPlate;
+import com.nkosy.objectorientatedprinciples.inheritance.service.impl.BigMac;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;

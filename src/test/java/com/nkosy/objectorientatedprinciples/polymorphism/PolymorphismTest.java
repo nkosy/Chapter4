@@ -1,9 +1,9 @@
 package com.nkosy.objectorientatedprinciples.polymorphism;
 
 import com.nkosy.config.AppConfigCorrection;
-import com.nkosy.objectorientatedprinciples.polymorphism.service.Impl.SportsCar;
-import com.nkosy.objectorientatedprinciples.polymorphism.service.Impl.Suv;
-import com.nkosy.objectorientatedprinciples.polymorphism.service.Impl.Truck;
+import com.nkosy.objectorientatedprinciples.polymorphism.service.impl.SportsCar;
+import com.nkosy.objectorientatedprinciples.polymorphism.service.impl.Suv;
+import com.nkosy.objectorientatedprinciples.polymorphism.service.impl.Truck;
 import com.nkosy.objectorientatedprinciples.polymorphism.service.Vehicle;
 import junit.framework.Assert;
 import org.junit.After;

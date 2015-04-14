@@ -6,7 +6,8 @@
 
 package com.nkosy.softwaredesignprinciples.lsp.violation.service.impl;
 
-import com.mycompany.bulidingManagement.LSP.Violation.Service.Projects;
+
+import com.nkosy.softwaredesignprinciples.lsp.violation.service.Projects;
 import java.util.Scanner;
 
 /**
